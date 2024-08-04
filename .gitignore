@@ -24,6 +24,5 @@ yarn-error.log*
 /server/mongo/configDummy.js
 
 #extra
-/server
 /src/components
 /src/views
