@@ -23,6 +23,3 @@ yarn-error.log*
 # Config
 /server/mongo/configDummy.js
 
-#extra
-/src/components
-/src/views
