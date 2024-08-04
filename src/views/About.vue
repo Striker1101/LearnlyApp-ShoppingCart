@@ -5,7 +5,7 @@
         <div class="modal-header">
           <h4 class="modal-title" style="margin: 0 auto">
             More About
-            <span style="color: crimson">ikismail</span>
+            <span style="color: crimson">Eromosele</span>
           </h4>
         </div>
         <div class="modal-body">
@@ -22,7 +22,9 @@
             <strong>goodluckodemilin@gmail.com</strong>
           </h6>
           <h6>
-            <a href="https://striker1101.github.io/" target="_blank"
+            <a
+              href="https://avatars.githubusercontent.com/u/102931830?v=4"
+              target="_blank"
               >striker1101.github.io</a
             >
             <strong></strong>
