@@ -1,0 +1,28 @@
+/* Success notification */
+.toast-success {
+  background-color: #28a745; /* Green background */
+  color: #fff; /* White text */
+}
+
+/* Error notification */
+.toast-error {
+  background-color: #dc3545; /* Red background */
+  color: #fff; /* White text */
+}
+
+/* Warning notification */
+.toast-warning {
+  background-color: #ffc107; /* Yellow background */
+  color: #212529; /* Dark text */
+}
+
+/* Info notification */
+.toast-info {
+  background-color: #17a2b8; /* Blue background */
+  color: #fff; /* White text */
+}
+
+/* Customizing Toastr close button */
+.toast-close-button {
+  color: #fff; /* White close button */
+}

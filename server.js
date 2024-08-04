@@ -10,6 +10,7 @@ const api = require("./server/routes/api");
 const productApi = require("./server/routes/productApi");
 const ShippingDetailApi = require("./server/routes/shippingDetailApi");
 const authApi = require("./server/routes/authApi");
+const cors = require("cors");
 
 const app = express();
 
@@ -18,6 +19,16 @@ app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
     extended: false,
+  })
+);
+
+// Use cors middleware
+app.use(
+  cors({
+    origin: "http://localhost:8081", // Specify the origin you want to allow
+    methods: "GET, POST, OPTIONS, PUT, PATCH, DELETE",
+    allowedHeaders: "X-Requested-With,content-type",
+    credentials: true,
   })
 );
 
@@ -53,8 +64,15 @@ app.use(history({ index: "/index.html" }));
 
 app.use("/api", [api, productApi, authApi, ShippingDetailApi]);
 
+//log output
+const requestLogger = (req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
+  next();
+};
+app.use(requestLogger);
+
 // Initialize the app.
-var server = app.listen(process.env.PORT || 8080, function() {
+var server = app.listen(process.env.PORT || 8080, function () {
   var port = server.address().port;
   console.log("App now running on port", port);
 });

@@ -9,7 +9,7 @@ import NProgress from "nprogress";
 // require styles
 import "swiper/swiper.min.css";
 import "../node_modules/nprogress/nprogress.css";
-
+import "./assets/style.css";
 Vue.use(VueAwesomeSwiper);
 
 Vue.config.productionTip = false;
