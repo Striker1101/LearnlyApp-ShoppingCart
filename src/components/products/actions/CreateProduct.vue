@@ -18,6 +18,9 @@ import {
   errorToaster,
   successToaster,
 } from "../../shared/service/ErrorHandler";
+
+let token = localStorage.getItem("token");
+
 export default {
   name: "createProduct",
   components: { Modal, ProductForm },
@@ -33,10 +36,13 @@ export default {
     },
 
     productAction: function (product) {
-      console.log("Creating new Product", product);
-
       axios
-        .post(`${process.env.VUE_APP_BASE_URL}/products`, product)
+        .post(`${process.env.VUE_APP_BASE_URL}/products`, product, {
+          withCredentials: true,
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
         .then((response) => {
           console.log(response);
           this.showModal = false;

@@ -5,7 +5,7 @@
         <div class="modal-header">
           <h4 class="modal-title" style="margin: 0 auto">
             More About
-            <span style="color:crimson">ikismail</span>
+            <span style="color: crimson">ikismail</span>
           </h4>
         </div>
         <div class="modal-body">
@@ -16,13 +16,15 @@
             height="140"
             border="0"
             class="avatar"
-          >
-          <h3 class="media-heading">Mohammed Ismail</h3>
+          />
+          <h3 class="media-heading">Odemilin Eromosele</h3>
           <h6>
-            <strong>ikismail7@gmail.com</strong>
+            <strong>goodluckodemilin@gmail.com</strong>
           </h6>
           <h6>
-            <a href="https://ikismail.github.io/" target="_blank">ikismail.github.io</a>
+            <a href="https://striker1101.github.io/" target="_blank"
+              >striker1101.github.io</a
+            >
             <strong></strong>
           </h6>
 

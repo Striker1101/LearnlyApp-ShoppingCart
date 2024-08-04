@@ -39,7 +39,6 @@ router.route("/login").post(async (req, res) => {
       user: {
         id: user._id,
         email: user.email,
-        isAdmin: user.isAdmin,
       },
     };
 
@@ -65,7 +64,7 @@ router.route("/login").post(async (req, res) => {
       }
     );
   } catch (err) {
-    console.error(err);
+    console.error("error" + err);
     res.status(500).send("Server error");
   }
 });

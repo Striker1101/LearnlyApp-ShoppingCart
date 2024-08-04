@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 // const mongodb = require('../mongo/config')
-
+const verifyToken = require("../middleware/authMiddleware");
 const ProductModel = require("../mongo/model/product");
 
 /*
@@ -14,7 +14,7 @@ router
   .route("/products")
 
   //  Create a new Product
-  .post((req, res) => {
+  .post(verifyToken, (req, res) => {
     const product = new ProductModel(); // create a new instance of the Product model
 
     product.productName = req.body.productName;
@@ -25,17 +25,16 @@ router
     product.productSeller = req.body.productSeller;
     product.productRating = req.body.productRating;
 
-    // save the bear and check for errors
-    product.save(product, (err, product) => {
+    // save the product and check for errors
+    product.save((err, product) => {
       if (err) {
-        res.send(err);
+        return res.status(500).send(err);
       }
-
-      console.log("**********NEWLY CREATED SITEURL***********");
-      console.log(product);
-      res.send(product);
+      console.log("**********NEWLY CREATED PRODUCT***********");
+      return res.status(200).send(product);
     });
   })
+
   // Get All products
   .get((req, res) => {
     ProductModel.find({}, (err, data) => {
