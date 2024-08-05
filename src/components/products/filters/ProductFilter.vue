@@ -4,10 +4,7 @@
       <h4 class="d-flex mb-3">
         <span class="text-muted">Filters:</span>
       </h4>
-      <div
-        class="form-group createProduct"
-        v-if="loggedUser && loggedUser.isAdmin"
-      >
+      <div class="form-group createProduct" v-if="loggedUser">
         <button class="btn buttonGreen-outline" @click="openCreateModal">
           Create New Product
         </button>
@@ -24,8 +21,9 @@
             v-for="(category, index) in categories"
             :key="index"
             v-bind:value="category.productCategory"
-            >{{ category.productCategory }}</option
           >
+            {{ category.productCategory }}
+          </option>
         </select>
       </div>
       <div class="form-group">
@@ -40,16 +38,15 @@
             v-for="(seller, index) in sellers"
             :key="index"
             v-bind:value="seller.productSeller"
-            >{{ seller.productSeller }}</option
           >
+            {{ seller.productSeller }}
+          </option>
         </select>
       </div>
       <ul class="list-group">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
-        <li class="list-group-item">Porta ac consectetur ac</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <li class="list-group-item">product new 1</li>
+        <li class="list-group-item">product new 2</li>
+        <li class="list-group-item">product new 3</li>
       </ul>
     </div>
     <create-product ref="createProduct" />

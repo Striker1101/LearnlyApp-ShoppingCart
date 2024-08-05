@@ -16,13 +16,13 @@
           <h6 class="my-0">{{ product.productName }}</h6>
         </div>
         <span class="text-muted" style="width: 120px"
-          >₹ {{ product.productPrice }}</span
+          >$ {{ product.productPrice }}</span
         >
       </li>
       <hr />
       <li class="list-group-item d-flex justify-content-between">
-        <span>Total (INR)</span>
-        <strong>₹ {{ totalValue.toFixed(2) }}</strong>
+        <span>Total (Dol)</span>
+        <strong>$ {{ totalValue.toFixed(2) }}</strong>
       </li>
     </ul>
   </div>
@@ -50,5 +50,4 @@ export default {
   },
 };
 </script>
-<style>
-</style>
+<style></style>

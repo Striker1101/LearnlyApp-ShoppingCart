@@ -76,3 +76,8 @@ npm run test
 ```
 npm run lint
 ```
+
+### using docker
+
+- docker-compose build
+- docker-compose up

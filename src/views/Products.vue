@@ -1,17 +1,5 @@
 <template>
   <div class="products">
-    <!-- <button class="btn btn-secondary">
-      <router-link to="/products/create">Add Products</router-link>
-    </button> -->
-
-    <!-- Button to open the modal -->
-    <button class="btn btn-success" @click="showCreateProductModal">
-      Create New Product
-    </button>
-
-    <!-- createProduct component -->
-    <createProduct ref="createProductComponent" />
-
     <div class="row">
       <div class="col-md-3 order-md-1 mb-4">
         <product-filter :categories="categories" :sellers="sellers" />
@@ -29,13 +17,12 @@
 import ProductsList from "@/components/products/ProductsList";
 import CardLoader from "@/components/shared/CardLoader";
 import ProductFilter from "@/components/products/filters/ProductFilter";
-import CreateProduct from "../components/products/actions/CreateProduct.vue";
 import axios from "axios";
 import _ from "lodash";
 
 export default {
   name: "allProducts",
-  components: { ProductsList, CardLoader, ProductFilter, CreateProduct },
+  components: { ProductsList, CardLoader, ProductFilter },
   data() {
     return {
       categories: [],
@@ -92,10 +79,6 @@ export default {
 
         this.product_duplicate = filteredData;
       }
-    },
-
-    showCreateProductModal() {
-      this.$refs.createProductComponent.showModalForm();
     },
   },
 

@@ -50,7 +50,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "engines": {
-    "node": "12"
+    "node": "20"
   },
   "eslintConfig": {
     "root": true,
